@@ -1,9 +1,11 @@
 <template>
     <div class="index">
-        <Header/>
+        <Header />
         <main class="main">
-            <Hero/>
+            <Hero />
+            <Articles />
         </main>
+        <Footer></Footer>
     </div>
 </template>
 

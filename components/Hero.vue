@@ -22,7 +22,7 @@
     
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .hero{ 
         &__container{
             display: flex;
@@ -53,6 +53,10 @@
         }
     }
     .hero-content{
+        margin: 44px 0px 34px 0px;
+        @media (max-width: 767.98px){
+            margin: 32px 0px 52px 0px;
+        }
         &__title{
             font-weight: 700;
             font-size: 54px;
@@ -61,6 +65,10 @@
             text-align: center;
             color: #000000;
             @include adaptiv-font(54, 38);
+            margin: 0px 0px 32px 0px;
+            @media (max-width: 767.98px){
+                margin: 0px 0px 24px 0px;
+            }
         }
         &__subtitle{
             margin: 0 auto;
