@@ -56,6 +56,8 @@ export default {
         position: absolute;
         top: 18px;
         left: -5px;
+        text-align: center;
+        width: 100%;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: #fff;

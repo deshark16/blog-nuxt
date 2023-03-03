@@ -1,10 +1,7 @@
 <template>
     <section class="hero">
         <div class="hero__container">
-            <div class="hero__img">
-                <img src="@/public/mainImg.png">
-            </div>
-            <div class="hero__content font-sfpro hero-content">
+            <div class="hero__content hero-content">
                 <h1 class="hero-content__title">
                     A few words about this blog platform, Ghost, and how this site was made
                 </h1>
@@ -15,32 +12,46 @@
                 </div>
             </div>
         </div>
+        <div class="hero__img">
+            <img src="@/public/mainImg.png">
+        </div>
     </section>
+    <!-- /*  ============== POST =========== */ -->
+    <section class="post">
+        <div class="post__container">
+            <hr style="margin: 24px 0px 0px 0px;">
+            <PostUser/>
+            <PostContent/>
+            <PostShare/>
+        </div>
+    </section>
+    <!-- /*  ============== POST =========== */ -->
 </template>
 
-<script setup>
-import { useLocalFont } from '#font-loader';
-
-useLocalFont([
-    {
-        src: 'public/fonts/SFProDisplay/SFPRODISPLAYREGULAR.OTF',
-        family: 'SF Pro Display',
-        class: 'font-sfpro',
-        weight: '400'
-    }
-])
-</script>
-
 <style lang="scss" scoped>
-    .hero{ 
+    .post{
+        &__content{
+            font-family: New York;
+            font-weight: 400;
+            @include adaptiv-font(20, 16);
+        }
+        &__img{
+            margin: 10px 0px;
+            img{
+                width: 100%;
+            }
+        }
         &__container{
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            flex-direction: column;
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+    }       
+    .hero{
+        &__container{
+            padding: 210px 10px 0px 10px;
             max-width: 858px;
             margin: 0 auto;
-            padding: 210px 10px 0px 10px;
             @media (max-width: 1023.98px){
                 padding: 180px 10px 0px 10px;
             }
@@ -53,8 +64,8 @@ useLocalFont([
         }
         &__img{
             display: flex;
-            justify-content: center;
             img{
+                width: 100%;
                 @media (max-width: 855px){
                     width: 100%;
                 }
